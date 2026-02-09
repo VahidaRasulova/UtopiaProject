@@ -150,8 +150,8 @@ background-color: #3a5041 !important;
   font-family: "Hanken Grotesk", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 42px;
+  font-size: 20px;
+  line-height: 35px;
   transform: translateX(-150px);
   width: 655px;
   opacity: 0;
@@ -542,6 +542,10 @@ background-color: #3a5041 !important;
   display: flex;
   gap: 7px;
 }
+.coment li{
+  color: rgb(241, 210, 72);
+  font-size: 20px;
+}
 
 .coment img {
   width: 24px;
@@ -670,17 +674,17 @@ background-color: #3a5041 !important;
 }
 
 .back-text p {
-  color: #c1c1c1;
-  max-width: 500px;
+  color: #e7e5e5;
+  max-width: 600px;
 }
 
 .back-text h5 {
   font-family: "Hanken Grotesk", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 18px;
   line-height: 32px;
-  color: #fff;
+  color: #ffffff;
 }
 
 h5 {

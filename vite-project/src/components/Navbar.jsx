@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useState } from "react";
+import { useRef, useState,useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -18,13 +18,42 @@ function Navbar({ dispatch, basketCount }) {
     console.log("kil");
   };
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Django'dan oturum bilgisini al
+    fetch("http://127.0.0.1:8000/api/check_auth/") // Bu URL'yi güncellemelisiniz
+      .then((response) => response.json())
+      .then((data) => setUser(data));
+  }, []);
+
+  const handleLogout = () => {
+    // Oturumu kapatma işlemi için API'ye istek gönder
+    fetch("http://127.0.0.1:8000/api/logout/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // Eğer token gerekiyorsa, token header'ını burada eklemelisin
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          setUser(null); // Kullanıcıyı null yaparak oturumu kapattığımızı belirtebilirsiniz
+        }
+      });
+  };
+
+
+
+
  const green='Green.png'
  const greenPath=`/static/${green}`
   return (
     <>
       <div className="sale-text">
         <h2>
-          spring seaSon sale | 20% off entire store | Free Premium UK Delivery
+        YAZ MÖVSÜMÜ ENDİRİMİ | BÜTÜN MAĞAZA 20% ENDİRİM | PULSUZ PREMIUM Böyük Britaniyaya Çatdırılma
         </h2>
       </div>
       <div className="navbar">
@@ -36,27 +65,27 @@ function Navbar({ dispatch, basketCount }) {
             <div className="nav-list">
               <ul className="ul-bir ul-home">
                 <li>
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/">Əsas səhifə</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/products">Products</NavLink>
-                </li>
-
-                <li>
-                  {" "}
-                  <NavLink to="/about">About Us</NavLink>
-                </li>
-                <li>
-                  {" "}
-                  <NavLink to="/faqs">FAQ</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/blog">Blog</NavLink>
+                  <NavLink to="/products">Məhsullar</NavLink>
                 </li>
 
                 <li>
                   {" "}
-                  <NavLink to="/contact">Contact</NavLink>
+                  <NavLink to="/about">Haqqinda</NavLink>
+                </li>
+                <li>
+                  {" "}
+                  <NavLink to="/faqs">Suallar</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/blog">Bloq</NavLink>
+                </li>
+
+                <li>
+                  {" "}
+                  <NavLink to="/contact">Əlaqə</NavLink>
                 </li>
               </ul>
             </div>
@@ -99,11 +128,15 @@ function Navbar({ dispatch, basketCount }) {
                 </div> */}
 
               </div>
-              <NavLink to="/login"><div className="user-icon">
-                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="" />
-                {/* <NavLink to="/login"><AiOutlineUser/></NavLink> */}
-              </div></NavLink>
-
+              {user && user.authenticated ? (
+    <div>
+        Hello, {user.username}! <button onClick={handleLogout}>Çıxış</button>
+    </div>
+) : (
+    <div className="log-reg">
+        <a href="/login">Daxil ol</a> / <a href="/register">Qeydiyyat</a>
+    </div>
+)}
               <div className="nav-list" ref={navRef}>
                 <div className="nav-meridian">
                   <div className="nav-img-res">
@@ -117,27 +150,27 @@ function Navbar({ dispatch, basketCount }) {
 
                 <ul className="ul-iki">
                   <li onClick={showNavbar}>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/">Əsas Səhifə</NavLink>
                   </li>
                   <li onClick={showNavbar}>
-                    <NavLink to="/products">Products</NavLink>
-                  </li>
-                  <li onClick={showNavbar}>
-                    {" "}
-                    <NavLink to="/blog">Blog</NavLink>
+                    <NavLink to="/products">Məhsullar</NavLink>
                   </li>
                   <li onClick={showNavbar}>
                     {" "}
-                    <NavLink to="/about">About Us</NavLink>
+                    <NavLink to="/blog">Bloq</NavLink>
                   </li>
                   <li onClick={showNavbar}>
                     {" "}
-                    <NavLink to="/contact">Contact</NavLink>
+                    <NavLink to="/about">Haqqinda</NavLink>
+                  </li>
+                  <li onClick={showNavbar}>
+                    {" "}
+                    <NavLink to="/contact">Əlaqə</NavLink>
                   </li>
 
                   <li onClick={showNavbar}>
                     {" "}
-                    <NavLink to="/faqs">FAQ</NavLink>
+                    <NavLink to="/faqs">Suallar</NavLink>
                   </li>
                 </ul>
 

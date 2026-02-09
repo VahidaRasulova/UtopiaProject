@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import { Autoplay } from "swiper";
 import { Pagination, Navigation } from "swiper";
 import ScrollToTop from "react-scroll-to-top";
-
+import {AiFillStar } from "react-icons/ai";
 import ChatMessage from "../components/ChatMessage";
 // import SwiperHome from './components/SwiperHome'
 
@@ -70,13 +70,12 @@ function Home() {
           <div className="container">
             <div className="header-text-home">
               
-              <h1>MODERN, CONTEMPORARY OUTDOOR FURNITURE</h1>
+              <h1>Müasir Komfortlu Ev mebelləri</h1>
               <p>
-              Furniture is one of the most important parts of our homes and makes our homes beautiful and comfortable. On our furniture e-commerce site, you can find all kinds of furniture products for your home. 
-              </p>
+              Mebel evlərimizin ən vacib hissələrindən biridir və evlərimizi gözəl və rahat edir. Mebel e-ticarət saytımızda siz eviniz üçün hər cür mebel məhsullarını tapa bilərsiniz.              </p>
               <Link to="/products">
                 {" "}
-                <button className="prmBtn">Shop Collections</button>
+                <button className="prmBtn">Mağaza Kolleksiyaları</button>
               </Link>
             </div>
           </div>
@@ -90,7 +89,7 @@ function Home() {
               <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="cl1" />
 
               <button className="btnGray btn-modal" onClick={toggleHomeModal}>
-                Collection 1
+              Kolleksiya 1
               </button>
               {homeModal && (
                 <div className="modal-home">
@@ -174,7 +173,7 @@ function Home() {
             <div className="collection2">
               <img src="https://images.unsplash.com/photo-1619596662481-085e45d69762?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80" alt="cl1" />
               <button className="btnGray" onClick={toggleHomeModalCol2}>
-                Collection 2
+              Kolleksiya 2
               </button>
               {homeModalCol2 && (
                 <div className="modal-home">
@@ -250,7 +249,7 @@ function Home() {
             <div className="collection2">
               <img src="https://images.unsplash.com/photo-1558211583-d26f610c1eb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1106&q=80" alt="cl1" />
               <button className="btnGray" onClick={toggleHomeModalCol3}>
-                Collection 3
+              Kolleksiya 3
               </button>
               {homeModalCol3 && (
                 <div className="modal-home">
@@ -326,7 +325,7 @@ function Home() {
             <div className="collection2">
               <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=958&q=80" alt="cl1" />
               <button className="btnGray" onClick={toggleHomeModalCol4}>
-                Collection 4
+              Kolleksiya 4
               </button>
               {homeModalCol4 && (
                 <div className="modal-home">
@@ -402,7 +401,7 @@ function Home() {
             <div className="collection2">
               <img src="https://images.unsplash.com/photo-1638962502979-05d81dcaa096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1954&q=80" alt="cl1" />
               <button className="btnGray" onClick={toggleHomeModalCol5}>
-                Collection 5
+              Kolleksiya 5
               </button>
               {homeModalCol5 && (
                 <div className="modal-home">
@@ -486,24 +485,24 @@ function Home() {
                 <img src={orderPath} alt="order" />
               </div>
 
-              <h2>8 YEAR GUARANTEE</h2>
-              <p>For your 'peace' of mind</p>
+              <h2>8 İL ZƏMANƏT</h2>
+              <p>Sizin "Rahatliqiniz" Üçün</p>
             </div>
             <div className="premium-col">
               <div className="prm-img">
                 <img src={rustPath} alt="order" />
               </div>
 
-              <h2>Rust Free</h2>
-              <p>Quality Materials</p>
+              <h2>Pulsuz Çatdirlima</h2>
+              <p>Keyfiyyətli Materiallar</p>
             </div>
             <div className="premium-col">
               <div className="prm-img">
                 <img src={premiumPath} alt="order" />
               </div>
 
-              <h2>PREMIUM SERVICE</h2>
-              <p>Premium delivery available</p>
+              <h2>PREMIUM XİDMƏT</h2>
+              <p>Premium Çatdırılma Çövcuddur</p>
             </div>
           </div>
         </div>
@@ -511,10 +510,9 @@ function Home() {
       <section>
         <div className="container">
           <div className="center-text">
-            <h1>Ready To Ship</h1>
+            <h1>Göndərilməyə hazır</h1>
             <p>
-           Your satisfaction is our success. On our furniture e-commerce site, we always try to provide the highest quality service to meet the needs of our customers. 
-            </p>
+            Sizin məmnuniyyətiniz bizim uğurumuzdur. Mebel e-ticarət saytımızda müştərilərimizin ehtiyaclarını qarşılamaq üçün hər zaman ən yüksək keyfiyyətli xidmət göstərməyə çalışırıq.            </p>
           </div>
           {/*         
           <div className="ready-to"> */}
@@ -567,7 +565,7 @@ function Home() {
                     <div className="set-details">
                       <p className="set-name">Alma Velvet Armless</p>
                       <p className="set-price">£3,400.00</p>
-                      <button>View Set</button>
+                      <button>Görünüş Seti</button>
                     </div>
                   </div>
                 </Link>
@@ -582,7 +580,7 @@ function Home() {
                     <div className="set-details">
                       <p className="set-name">Alma Velvet Armless</p>
                       <p className="set-price">£3,400.00</p>
-                      <button>View Set</button>
+                      <button>Görünüş Seti</button>
                     </div>
                   </div>
                 </Link>
@@ -596,7 +594,7 @@ function Home() {
                     <div className="set-details">
                       <p className="set-name">Alma Velvet Armless</p>
                       <p className="set-price">£3,400.00</p>
-                      <button>View Set</button>
+                      <button>Görünüş Seti</button>
                     </div>
                   </div>
                 </Link>
@@ -610,7 +608,7 @@ function Home() {
                     <div className="set-details">
                       <p className="set-name">Alma Velvet Armless</p>
                       <p className="set-price">£3,400.00</p>
-                      <button>View Set</button>
+                      <button>Görünüş Seti</button>
                     </div>{" "}
                   </div>
                 </Link>
@@ -625,7 +623,7 @@ function Home() {
                     <div className="set-details">
                       <p className="set-name">Alma Velvet Armless</p>
                       <p className="set-price">£3,400.00</p>
-                      <button>View Set</button>
+                      <button>Görünüş Seti</button>
                     </div>
                   </div>
                 </Link>
@@ -639,7 +637,7 @@ function Home() {
                     <div className="set-details">
                       <p className="set-name">Alma Velvet Armless</p>
                       <p className="set-price">£3,400.00</p>
-                      <button>View Set</button>
+                      <button>Görünüş Seti</button>
                     </div>
                   </div>
                 </Link>
@@ -653,7 +651,7 @@ function Home() {
                     <div className="set-details">
                       <p className="set-name">Alma Velvet Armless</p>
                       <p className="set-price">£3,400.00</p>
-                      <button>View Set</button>
+                      <button>Görünüş Seti</button>
                     </div>{" "}
                   </div>
                 </Link>
@@ -668,7 +666,7 @@ function Home() {
                     <div className="set-details">
                       <p className="set-name">Alma Velvet Armless</p>
                       <p className="set-price">£3,400.00</p>
-                      <button>View Set</button>
+                      <button>Görünüş Seti</button>
                     </div>
                   </div>
                 </Link>
@@ -682,10 +680,9 @@ function Home() {
         <div className="section-image">
           <div className="sel-text">
             <img src={iynePath} alt="iyne" />
-            <p>COMMITED TO EUROPIAN MANUFACTURING</p>
+            <p>AVROPA İSTEHSALINA DƏSTƏK</p>
             <h1>
-              our Products are made with high quality european fabric and sewn
-              by a small team CRAFTSPEOPLE in EUROPE
+            Məhsullarımız Yüksək Keyfiyyətli Avropa Parçasından Hazırlanır və AVROPADA KÜÇÜK Qrup CAFTSPEOPLE tərəfindən tikilir
             </h1>
           </div>
         </div>
@@ -693,9 +690,9 @@ function Home() {
       <section>
         <div className="container">
           <div className="center-text">
-            <h1>Explore each unique collection</h1>
+            <h1>Hər bir unikal kolleksiyanı araşdırın</h1>
             <p>
-            On our furniture e-commerce site, we offer furniture products made from quality and durable materials at affordable prices that you can use for many years.
+            Mebel e-ticarət saytımızda uzun illər istifadə edə biləcəyiniz keyfiyyətli və davamlı materiallardan sərfəli qiymətə mebel məhsullarını təklif edirik.
             </p>
           </div>
           <div className="collections">
@@ -703,7 +700,7 @@ function Home() {
               <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="cl1" />
 
               <button className="btnGray btn-modal" onClick={toggleHomeModal}>
-                Collection 1
+              Kolleksiya 1
               </button>
               {homeModal && (
                 <div className="modal-home">
@@ -787,7 +784,7 @@ function Home() {
             <div className="collection2">
               <img src="https://images.unsplash.com/photo-1619596662481-085e45d69762?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80" alt="cl1" />
               <button className="btnGray" onClick={toggleHomeModalCol2}>
-                Collection 2
+              Kolleksiya 2
               </button>
               {homeModalCol2 && (
                 <div className="modal-home">
@@ -863,7 +860,7 @@ function Home() {
             <div className="collection2">
               <img src="https://images.unsplash.com/photo-1558211583-d26f610c1eb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1106&q=80" alt="cl1" />
               <button className="btnGray" onClick={toggleHomeModalCol3}>
-                Collection 3
+              Kolleksiya 3
               </button>
               {homeModalCol3 && (
                 <div className="modal-home">
@@ -939,7 +936,7 @@ function Home() {
             <div className="collection2">
               <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=958&q=80" alt="cl1" />
               <button className="btnGray" onClick={toggleHomeModalCol4}>
-                Collection 4
+              Kolleksiya 4
               </button>
               {homeModalCol4 && (
                 <div className="modal-home">
@@ -1015,7 +1012,7 @@ function Home() {
             <div className="collection2">
               <img src="https://images.unsplash.com/photo-1638962502979-05d81dcaa096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1954&q=80" alt="cl1" />
               <button className="btnGray" onClick={toggleHomeModalCol5}>
-                Collection 5
+              Kolleksiya 5
               </button>
               {homeModalCol5 && (
                 <div className="modal-home">
@@ -1095,32 +1092,26 @@ function Home() {
         <div className="container">
           <div className="section2-sing">
             <div className="section2-details">
-              <p className="section2-title frunt-title">FURNITURE TO WRITE HOME ABOUT</p>
+              <p className="section2-title frunt-title">EV MEBELLERİ HAQQİNDA MƏLUMAT</p>
               <p className="section2-description">
-              A furniture website is an online platform that specializes in selling furniture products to customers. These websites offer a wide range of furniture items that cater to the needs of different customers. Furniture websites allow customers to browse, select, and purchase products from the comfort of their homes, without the need to physically visit a brick-and-mortar store.
-
-A furniture website typically features a user-friendly interface that allows customers to easily navigate and find the products they are looking for. The website may be organized by furniture type, room, style, or material. Each product is typically accompanied by detailed descriptions, specifications, and multiple high-quality images to help customers make informed purchase decisions.
+              Mebel veb saytı müştərilərə mebel məhsullarının satışı üzrə ixtisaslaşmış onlayn platformadır. Bu veb-saytlar müxtəlif müştərilərin ehtiyaclarına cavab verən geniş çeşiddə mebel əşyaları təklif edir. Mebel veb saytları müştərilərə kərpic və harç mağazasına fiziki olaraq baş çəkmədən evlərinin rahatlığında məhsullara baxmaq, seçmək və almaq imkanı verir. Mebel veb saytı adətən müştərilərə axtardıqları məhsulları asanlıqla naviqasiya etməyə və tapmağa imkan verən istifadəçi dostu interfeysə malikdir. Veb sayt mebel növü, otaq, üslub və ya materiala görə təşkil edilə bilər. Müştərilərə məlumatlı satın alma qərarları verməyə kömək etmək üçün hər bir məhsul adətən ətraflı təsvirlər, spesifikasiyalar və çoxsaylı yüksək keyfiyyətli şəkillərlə müşayiət olunur.
               </p>
 
               <div className="coment">
                 <ul>
                   <li>
-                    <img src="./images/Home/ulduz.svg" alt="" />
+                    <AiFillStar/>
                   </li>
                   <li>
-                    <img src="./images/Home/ulduz.svg" alt="" />
-                  </li>
+                  <AiFillStar/>                  </li>
                   <li>
-                    <img src="./images/Home/ulduz.svg" alt="" />
-                  </li>
+                  <AiFillStar/>                  </li>
                   <li>
-                    <img src="./images/Home/ulduz.svg" alt="" />
-                  </li>
+                  <AiFillStar/>                  </li>
                   <li>
-                    <img src="./images/Home/ulduz.svg" alt="" />
-                  </li>
+                  <AiFillStar/>                  </li>
                 </ul>
-                <h3>Wade Warren</h3>
+                <h3>WADE WARREN</h3>
               </div>
             </div>
             <div className="section2-img">
@@ -1181,7 +1172,7 @@ A furniture website typically features a user-friendly interface that allows cus
       </section>
       <div className="container">
         <div className="word-instagram">
-          <h1>Get Inspired & Find Us on Instagram</h1>
+          <h1>İlham Alın Və Instagram-da Bizi İzləyin</h1>
         </div>
       </div>
       <section>
@@ -1191,7 +1182,7 @@ A furniture website typically features a user-friendly interface that allows cus
             <div className="footer-img-col">
               <img src="./images/Home/collection3.png" alt="" />
               <div className="overlay-foter-home">
-                <div className="whiteBtn">View Product</div>
+                <div className="whiteBtn">Məhsula Baxın</div>
               </div>
             </div>
           </Link>
@@ -1199,7 +1190,7 @@ A furniture website typically features a user-friendly interface that allows cus
             <div className="footer-img-col">
               <img src="./images/Home/foter.png" alt="" />
               <div className="overlay-foter-home">
-                <div className="whiteBtn">View Product</div>
+                <div className="whiteBtn">Məhsula Baxın</div>
               </div>
             </div>
           </Link>
@@ -1207,7 +1198,7 @@ A furniture website typically features a user-friendly interface that allows cus
             <div className="footer-img-col">
               <img src="./images/Home/foter2.png" alt="" />
               <div className="overlay-foter-home">
-                <div className="whiteBtn">View Product</div>
+                <div className="whiteBtn">Məhsula Baxın</div>
               </div>
             </div>
           </Link>
@@ -1215,7 +1206,7 @@ A furniture website typically features a user-friendly interface that allows cus
             <div className="footer-img-col">
               <img src="./images/Home/collection4.png" alt="" />
               <div className="overlay-foter-home">
-                <div className="whiteBtn">View Product</div>
+                <div className="whiteBtn">Məhsula Baxın</div>
               </div>
             </div>
           </Link>

@@ -3,6 +3,7 @@ import { FaFacebookF, FaTwitter,FaLinkedinIn, FaInstagram, FaPinterest} from "re
 import { BsTelephoneFill} from "react-icons/bs";
 import {FiMail} from "react-icons/fi";
 import {MdOutlineLocationOn} from "react-icons/md";
+import {LuPhone} from "react-icons/lu";
 
 import { Typewriter } from 'react-simple-typewriter'
 import {Link} from "react-router-dom"
@@ -19,14 +20,14 @@ function Text() {
     <>
       <div className="contact-img">
         <div className="contact-anime-text">
-         <h1>Follow Us on Social Media <span className="media-text" style={{ fontWeight: 'bold' }}> <Typewriter  words={['Instagram', 'Facebook', 'Twitter', 'Pinterest', 'Linkedin']}  loop={5}
+         <h1>Bizi Sosial Mediada İzləyin <span className="media-text" style={{ fontWeight: 'bold' }}> <Typewriter  words={['Instagram', 'Facebook', 'Twitter', 'Pinterest', 'Linkedin']}  loop={5}
             cursor
             cursorStyle='_'
             typeSpeed={70}
             deleteSpeed={50}
             delaySpeed={1000}
             /></span> </h1> 
-         <p>Visit my offical media outlets to learn more about my work in congress</p>
+         <p>Konqresdəki fəaliyyətim haqqında daha çox öyrənmək üçün rəsmi media orqanlarıma baş çəkin</p>
         </div>
         <div className="contact-anime-img">
           <div className="anime-icons">
@@ -47,19 +48,19 @@ function Text() {
 
         <div className="container">
           <div className="center-text">
-            <h1>We Ready To Help</h1>
+            <h1>Kömək Etməyə Hazırıq</h1>
             <p>
-              Please submit your inquiry using the form below. Be sure to provide
-              as much information as possible so we can assist you quickly.{" "}
+            Zəhmət olmasa sorğunuzu aşağıdakı formadan istifadə edərək göndərin. təmin etməyinizə əmin olun
+               mümkün qədər çox məlumat verin ki, sizə tez kömək edək.{" "}
             </p>
           </div>
           <div className="contactt">
             <div className="contact-col">
               <span>
-            
+            <LuPhone/>
               </span>
               <div className="contact-about">
-                <h3>Phone Number</h3>
+                <h3>TELEFON NÖMRƏSİ</h3>
                 <p>(62) 1829017</p>
               </div>
             </div>
@@ -77,7 +78,7 @@ function Text() {
               <MdOutlineLocationOn/>
               </span>
               <div className="contact-about">
-                <h3>Map Street</h3>
+                <h3>ADRES</h3>
                 <p>John Bucarest St. 199</p>
               </div>
             </div>
@@ -86,10 +87,10 @@ function Text() {
    
             <div className="container">
           <div className="center-text">
-            <h1>Let’s Talk With Us</h1>
+            <h1>Bizimlə Danış</h1>
             <p>
-              Our trained staff will normally respond to your request within 1
-              business day.
+            Təcrübəli heyətimiz adətən sorğunuza 1 ərzində cavab verəcəkdir
+               Biznes Günü.
             </p>
           </div>
       </div>

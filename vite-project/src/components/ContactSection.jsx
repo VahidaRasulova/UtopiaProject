@@ -44,11 +44,11 @@ function ContactSection() {
             <div className="form-col">
               <div className="form-col1">
                 <label>
-                  Name
+               AD
                   <input
                     type="text"
                     name="name"
-                    placeholder="Your Name"
+                    placeholder="Adınız"
                     required
                     onChange={(e) => setName(e.target.value)}
                   />
@@ -60,7 +60,7 @@ function ContactSection() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Your Email"
+                    placeholder="Sizin Email"
                     required
                     onChange={(e) => setEmail(e.target.value)}
                   />
@@ -68,11 +68,11 @@ function ContactSection() {
               </div>
             </div>
             <label>
-              Message
+           Mesaj
               <textarea
                 name="message"
                 id=""
-                placeholder="Your Message"
+                placeholder="Sizin mesajınız"
                 cols="30"
                 rows="10"
                 onChange={(e) => setMessage(e.target.value)}
@@ -80,7 +80,7 @@ function ContactSection() {
             </label>
 
             <button type="submit" className="contactBtn">
-              Send Message
+            Mesaj Göndər
             </button>
           </form>
         </div>

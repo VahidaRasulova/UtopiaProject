@@ -41,13 +41,13 @@ function Footer() {
 
     <div className="back">
       <div className="back-text">
-        <h1>How Can We Help You?</h1>
-        <p>We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order. </p>
-        <h5>Get In Touch support@Meridian.com </h5>
+        <h1>Biz sizə necə kömək edə bilərik?</h1>
+        <p>Biz üstün müştəri xidməti ilə fəxr edirik. Sifarişinizə kömək etmək üçün satış komandamızın üzvü ilə danışın. </p>
+        <h5>Əlaqəyə Keçin support@Meridian.com </h5>
       </div>
       <div className="back-tel">
         <button> <img src={telPath} alt="" /> 01789 339533</button>
-        <h5>8am to 6pm, 7 days a week</h5>
+        <h5>Həftənin 7 günü səhər 8-dən axşam 6-ya kimi</h5>
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@ function Footer() {
     <div className="footer-text">
       <div className="footer-col-1">
         <h3>
-          Head Office
+        Baş ofis
         </h3>
         <p>32 Plum St, Trenton, NJ 08638, United States</p>
         <div className="footer-contact">
@@ -74,51 +74,51 @@ function Footer() {
       <div className="footer-col-2">
         <div className="footer-coll">
           <h3>
-            Product
+          Məhsul
           </h3>
           <ul>
-            <li><a href="#">New Arrival</a></li>
-            <li><a href="#">Living Room</a></li>
-            <li><a href="#"> Kitchen & Dining Room</a></li>
+            <li><a href="#">Yeni Gələnlər</a></li>
+            <li><a href="#">Oturma otağı</a></li>
+            <li><a href="#"> Mətbəx və Yemək otağı</a></li>
             <li>
-              <a href="#">Bed Room</a>
+              <a href="#">Yataq otağı</a>
             </li>
             <li><a href="#">Accent</a></li>
-            <li><a href="#">Occasional Table</a></li>
-            <li><a href="#">Office/Home Office</a></li>
-            <li><a href="#">Outdoor Furniture</a></li>
+            <li><a href="#">Təsadüfi Cədvəl</a></li>
+            <li><a href="#">Ofis/Ev Ofisi</a></li>
+            <li><a href="#">Xarici Mebel</a></li>
           </ul>
         </div>
         <div className="footer-coll">
           <h3>
-            Help
+         Kömək
           </h3>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Haqqında</a></li>
+            <li><a href="#">Əlaqə</a></li>
           </ul>
         </div>
 
       </div>
       <div className="footer-col-3">
-        <h3>Join Meridian for Exclusive Offers</h3>
+        <h3>Eksklüziv Təkliflər Üçün Meridian-a Qoşulun</h3>
         <div className="footer-mail">
           <input type="email"  placeholder='Email adress' />
           <button><img src={arrowPath} alt="arrow" /></button>
         </div>
-        <p>Our newsletter is packed full of style ideas, new products and exclusive disounts. We are GDPR compliant, your information is secure with us.</p>
+        <p>Bülletenimiz stil ideyaları, yeni məhsullar və eksklüziv endirimlərlə doludur. Biz GDPR-ə uyğunyıq, məlumatlarınız bizimlə təhlükəsizdir.</p>
       </div>
     </div>
     <div className="terms">
       <ul>
         <li>
-          <a href="#">Terms & Conditions</a>
+          <a href="#">Şərtlər və qaydalar</a>
         </li>
         <li>
-          <a href="#">Privacy Policy</a>
+          <a href="#">Gizlilik Siyasəti</a>
         </li>
         <li>
-          <a href="#">Shipping Policy</a>
+          <a href="#">Göndərmə Siyasəti</a>
         </li>
       </ul>
       <ul>

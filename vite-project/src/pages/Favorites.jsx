@@ -52,15 +52,17 @@ function Favorites({ products, favorites, basket, dispatch }) {
     );
   };
 
-  
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
   };
-  const filteredFavorites = favorites.filter(favorite =>
+  const filteredFavorites = favorites.filter((favorite) =>
     favorite.name?.toLowerCase().includes(searchTerm.toLowerCase())
-  ); 
+  );
+
+  const empty = "empty1.png";
+  const emptyPath = `/static/${empty}`;
   return (
     <section>
       <div className="banner">
@@ -72,10 +74,9 @@ function Favorites({ products, favorites, basket, dispatch }) {
             onMouseEnter={() => toggleTab(1)}
           >
             <div className="ban-text">
-              <h1>LIVING</h1>
+              <h1>OTURMA OTAĞI</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestiae, animi!
+              Qonaq otagi mebel dəstləri keyfiyyət  ilə tanındıqları üçün digər dəstlərdən daha cəlbedicidir.
               </p>
             </div>
           </div>
@@ -87,12 +88,11 @@ function Favorites({ products, favorites, basket, dispatch }) {
           >
             <div className="ban-text">
               <div className="po-text">
-                <h1>BEDROOM</h1>
+                <h1>YATAQ OTAĞI</h1>
               </div>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestiae, animi!
+              Yataq otağı evin ən vacib hissələrindən biridir və biz bu əhəmiyyəti başqa nəzərdən keçirmirik.
               </p>
             </div>
           </div>
@@ -103,10 +103,9 @@ function Favorites({ products, favorites, basket, dispatch }) {
             onMouseEnter={() => toggleTab(3)}
           >
             <div className="ban-text">
-              <h1>DINING</h1>
+              <h1>YEMƏK OTAGİ</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestiae, animi!
+              Evimizin ən istirahətli və birləşdirici hissələrindən biri yemək otağıdır.
               </p>
             </div>
           </div>
@@ -117,10 +116,9 @@ function Favorites({ products, favorites, basket, dispatch }) {
             onMouseEnter={() => toggleTab(4)}
           >
             <div className="ban-text">
-              <h1>KİTCHEN</h1>
+              <h1>MƏTBƏX</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestiae, animi!
+              Mətbəx, evimizin ruhu və lezzətin məkanıdır.
               </p>
             </div>
           </div>
@@ -131,10 +129,9 @@ function Favorites({ products, favorites, basket, dispatch }) {
             onMouseEnter={() => toggleTab(5)}
           >
             <div className="ban-text">
-              <h1>STORAGE</h1>
+              <h1>OFİS</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestiae, animi!
+              Ofis, iş fəaliyyətinizi icra etdiyiniz və yaradıcı fikirlər üçün mühit yarattığınız yerdir.
               </p>
             </div>
           </div>
@@ -185,22 +182,20 @@ function Favorites({ products, favorites, basket, dispatch }) {
       </div>
 
       <div className="fov-center">
-        <h1> My Favourites</h1>
-        <p>
-        Here you can add your favorite products according to the basket.
-        </p>
+        <h1> Sevimlilərim</h1>
+        <p>Burada səbətə uyğun olaraq sevdiyiniz məhsulları əlavə edə bilərsiniz.</p>
       </div>
 
       <div className="container">
         <div className="fov-search">
           <input type="text" placeholder="Search..." onChange={handleSearch} />
           <div className="fov-search-icon">
-<RiSearchLine/>
+            <RiSearchLine />
           </div>
         </div>
         {favorites.length && filteredFavorites.length ? (
           <div className="favorite">
-            {products.length  ? (
+            {products.length ? (
               filteredFavorites.map((favorite) => {
                 const inBasket = basket.find((a) => a.id == favorite.id);
                 const product = products.find(
@@ -240,27 +235,26 @@ function Favorites({ products, favorites, basket, dispatch }) {
                     </div>
                   </div>
                 );
-              }))
-               :(
+              })
+            ) : (
               <ClipLoader
-              color={color}
-              loading={loading}
-              cssOverride={override}
-              size={150}
-              aria-label="Loading Spinner"
-              data-testid="loader"
-            />)
-            }
-
-
-
-
+                color={color}
+                loading={loading}
+                cssOverride={override}
+                size={150}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            )}
           </div>
         ) : (
           <div className="no-favorit">
-          <img src="./images/Faqs/empty1.png" alt="" />
-            <h1>Your cart is empty</h1>
-            <p>Looks like you have not added anything to you cart. Go ahead & explore top catogeries.</p>
+            <img src={emptyPath} alt="" />
+            <h1>Sizin səbətiniz boşdur</h1>
+            <p>
+            Görünür, səbətinizə heç nə əlavə etməmisiniz. Davam et &
+               ən yaxşı kateqoriyaları araşdırın.
+            </p>
             <Link to="/products">
               <button>Go Shop</button>
             </Link>

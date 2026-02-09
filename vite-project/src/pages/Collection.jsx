@@ -211,16 +211,16 @@ function Collection() {
             <Link to="/">
               <span>Home </span>
             </Link>{" "}
-            / Products
+            / Məhsullar
           </p>
         </div>
         <div className="daySale">
           <div className="daySale-content">
-            <h1>Two Day Sale - Up To 40% Off</h1>
+            <h1>İki günlük endirim - 40%-ə qədər endirim</h1>
             <div className="hourses">
               <Timer duration={20 * 24 * 60 * 60 * 1000} />
             </div>
-            <h3>Ending Soon!</h3>
+            <h3>TEZLİKLƏ BİTİR!</h3>
           </div>
         </div>
         <div className="panel-products">
@@ -237,10 +237,10 @@ function Collection() {
                   setFilters({ ...filters, price: e.target.value })
                 }
               >
-                <option value="nameasc">Name (A-Z)</option>
-                <option value="namedesc">Name(Z-A)</option>
-                <option value="priceasc">Price (lowest)</option>
-                <option value="pricedesc">Price (highest)</option>
+                <option value="nameasc">Ad (A-Z)</option>
+                <option value="namedesc">Ad (Z-A)</option>
+                <option value="priceasc">Qiymət (ən aşağı)</option>
+                <option value="pricedesc">Qiymət (ən yüksək)</option>
               </select>
             </div>
           </div>
@@ -262,7 +262,7 @@ function Collection() {
                   style={{ cursor: "pointer", userSelect: "none" }}
                   onClick={() => setFilters({ ...filters, category: "all" })}
                 >
-                  All ({datas.length})
+                  HAMISI ({datas.length})
                 </li>
                 {categories.map((category) => (
                   <li

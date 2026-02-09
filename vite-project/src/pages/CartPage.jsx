@@ -5,6 +5,7 @@ import "react-credit-cards-2/dist/es/styles-compiled.css";
 import { connect } from "react-redux";
 import "./CartPage.css";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { BiError } from "react-icons/bi";
 function CartPage({ products, basket, dispatch }) {
 
 const iconsremove='iconsremove.png'
@@ -63,6 +64,7 @@ const empty2Path=`/static/${empty2}`
   const handleInputChange = (evt) => {
     const { name, value } = evt.target;
     setState((prev) => ({ ...prev, [name]: value }));
+    setErrorMessage("");
   };
 
   const handleInputFocus = (evt) => {
@@ -89,7 +91,7 @@ const empty2Path=`/static/${empty2}`
       state.cvc === "" ||
       state.name === ""
     ) {
-      setErrorMessage("Please fill in all fields!");
+      setErrorMessage(" Zəhmət olmasa bütün sahələri doldurun!");
       return;
     } else {
       setErrorMessage("");
@@ -112,24 +114,24 @@ const empty2Path=`/static/${empty2}`
       <div className="container">
         <div className="daySale-before">
           <p>
-            <span>Home </span> / SHOPPING CART
+            <span>Əsas Səhifə </span> / Alış-Veriş Kartı
           </p>
         </div>
         <div className="shopping-carts">
           <div className="shopping">
             <div className="shopping-text">
-              <h1>Shopping Cart</h1>
-              <p>{basket.length} items</p>
+              <h1>Alış-veriş kartı</h1>
+              <p>{basket.length} əşyalar</p>
             </div>
             <div className="cart-table">
               <div className="table-text">
-                <h3>Products</h3>
+                <h3>Məhsullar</h3>
               </div>
               <div className="table-text2">
-                <h3>Quantity</h3>
+                <h3>Miqdar</h3>
               </div>
               <div className="table-text3">
-                <h3>Total</h3>
+                <h3>Ümumi</h3>
               </div>
             </div>
             <div className="cards">
@@ -174,27 +176,27 @@ const empty2Path=`/static/${empty2}`
                 ) : (
                   <div className="no-favorit-cart">
                   <img src={empty2Path} alt="" />
-                    <h1>Your cart is empty</h1>
-                    <p>Looks like you have not added anything to you cart. Go ahead & explore top catogeries.</p>
+                    <h1>Səbətiniz boşdur</h1>
+                    <p>Görünüşe göre sepetinize hiçbir şey eklememişsiniz. Devam edin ve en iyi kategorileri keşfedin.</p>
                  
                   </div>
                 )
               ) : (
-                <h1>loading</h1>
+                <h1>gözlənilir</h1>
               )}
             </div>
           </div>
           <div className="order">
             <div className="shopping-text">
-              <h1>Order Summary</h1>
+              <h1>Sifariş Keçmişi</h1>
             </div>
 
             <div className="order-card">
               <div className="subtotal">
-                <h4>Subtotal</h4>
+                <h4>Umimi qiyməti</h4>
                 <h3>{subtotal.toFixed(2)}</h3>
               </div>
-              <p>(includes $416.67 20% VAT)</p>
+              <p>(416,67 dollar 20% ƏDV daxildir)</p>
               <div
                 className={
                   !circle1 ? "free-shopping clickfree" : "free-shopping"
@@ -203,7 +205,7 @@ const empty2Path=`/static/${empty2}`
               >
                 <div className="free">
                   <span className={circle1 ? "crucle click" : "crucle"}></span>
-                  <h4>Standard Free Shipping</h4>
+                  <h4>Standart Pulsuz Çatdırılma</h4>
                 </div>
                 <h4>£00.00</h4>
               </div>
@@ -215,12 +217,12 @@ const empty2Path=`/static/${empty2}`
               >
                 <div className="free">
                   <span className={!circle1 ? "crucle click" : "crucle"}></span>
-                  <h4>Premium Shipping</h4>
+                  <h4>Premium Çatdırılma</h4>
                 </div>
                 <h4>$118.80</h4>
               </div>
               <div className="subtotal">
-                <h4>Total</h4>
+                <h4>Ümumi</h4>
                 <h3>
                   $
                   {!circle1
@@ -229,12 +231,12 @@ const empty2Path=`/static/${empty2}`
                 </h3>
               </div>
               <button className="shoppingBtn" onClick={toggleCrediModal}>
-                Proceed To Checkout
+            Davam Et
               </button>
               <img src="./img/Groupvisa.svg" alt="" srcset="" />
               <p className="free-p">
-                Discount prices will be active after entering the checkout
-                process
+              Endirimli qiymətlər kassaya daxil olduqdan sonra aktiv olacaq
+                 proses
               </p>
             </div>
           </div>
@@ -242,68 +244,114 @@ const empty2Path=`/static/${empty2}`
       </div>
       {crediModal && (
 
-        <div className="creditCard">
-          <div className="overlay-contact" onClick={toggleCrediModal}></div>
-          <div className="credit-modal">
-            <div className="credit-card">
-              <Cards
-                number={state.number}
-                expiry={state.expiry}
-                cvc={state.cvc}
-                name={state.name}
-                focused={state.focus}
-              />
-            </div>
-            <div className="credit_card_form">
-              <form onSubmit={handleSubmit}>
-                <input
-                  className="numberinput"
-                  type="number"
-                  name="number"
-                  placeholder="Card Number"
-                  value={state.number}
-                  onChange={handleInputChange}
-                  onFocus={handleInputFocus}
-                />
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  value={state.name}
-                  onChange={handleInputChange}
-                  onFocus={handleInputFocus}
-                />
-                <div className="card-ex">
-                  <input
-                    className="numberinput"
-                    type="number"
-                    name="expiry"
-                    placeholder="MM/YY Expiry"
-                    value={state.expiry}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                  />
-                  <input
-                    className="numberinput"
-                    type="number"
-                    name="cvc"
-                    placeholder="CVC"
-                    value={state.cvc}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                  />
-                </div>
-                {errorMessage && (
-                  <p className="error-message">{errorMessage}</p>
-                )}
-                <button className="crediBtn" onClick={handleSubmitt}>
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
+<div className="creditCard">
+  <div className="overlay-contact" onClick={toggleCrediModal}></div>
+  <div className="credit-modal">
+    <div className="credit-card">
+      <Cards
+        number={state.number}
+        expiry={state.expiry}
+        cvc={state.cvc}
+        name={state.name}
+        focused={state.focus}
+      />
+    </div>
+    <div className="credit_card_form">
+      <form onSubmit={handleSubmit}>
+        <input
+          className="numberinput"
+          type="number"
+          name="number"
+          placeholder="Card Number"
+          value={state.number}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+          maxLength="3"
+          onKeyDown={(e) => {
+          
+            if (e.key === 'Backspace' || e.key === 'Delete') {
+              return;
+            }
+        
+          
+            if (e.target.value.length >= 16 || !/^\d$/.test(e.key)) {
+              e.preventDefault();
+            }
+          }}
+        />
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={state.name}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+          onKeyDown={(e) => {
+            if (e.key === ' ' && e.target.selectionStart === 0) {
+              e.preventDefault();
+            } else if (e.key.match(/[^A-Za-z\s]/)) {
+              e.preventDefault();
+            }
+          }}
+          style={{ textTransform: 'capitalize' }}
+        />
+        <div className="card-ex">
+          <input
+            className="numberinput"
+            type="number"
+            name="expiry"
+            placeholder="MM/YY Expiry"
+            value={state.expiry}
+            onChange={handleInputChange}
+            onFocus={handleInputFocus}
+            maxLength="3"
+            onKeyDown={(e) => {
+              // Eğer kullanıcı Backspace veya Delete tuşuna basarsa silmeye izin ver
+              if (e.key === 'Backspace' || e.key === 'Delete') {
+                return;
+              }
+          
+              // Eğer cvc 3 hane ise veya rakam değilse, işlemi engelle
+              if (e.target.value.length >= 4 || !/^\d$/.test(e.key)) {
+                e.preventDefault();
+              }
+            }}
+          />
+          <input
+            className="numberinput"
+            type="number"
+            name="cvc"
+            placeholder="CVC"
+            value={state.cvc}
+            onChange={handleInputChange}
+            onFocus={handleInputFocus}
+            maxLength="3"
+            onKeyDown={(e) => {
+         
+              if (e.key === 'Backspace' || e.key === 'Delete') {
+                return;
+              }
+          
+        
+              if (e.target.value.length >= 3 || !/^\d$/.test(e.key)) {
+                e.preventDefault();
+              }
+            }}
+          />
         </div>
-      )}
+        {errorMessage && (
+          <p className="error-mes"> <span className="eror-icon"> <BiError/></span>
+          {errorMessage}</p>
+       
+        )}
+        <button className="crediBtn" onClick={handleSubmitt}>
+         Təsdiq edin
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+)}
 
       {contactModal && (
         <div className="seccess_box">
@@ -315,7 +363,7 @@ const empty2Path=`/static/${empty2}`
             </div>
             <div className="box__text">Thank You!</div>
             <button onClick={handleOkButtonClick} className="contact-modal-btn">
-              OK
+              Təsdiqlə
             </button>
           </div>
         </div>
