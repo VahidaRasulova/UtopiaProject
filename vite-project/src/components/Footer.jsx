@@ -5,8 +5,8 @@ import {BsInstagram } from "react-icons/bs";
 const tel='tel.svg'
 const telPath=`/static/${tel}`
 
-const m='m.svg'
-const mPath=`/static/${m}`
+const green='Green.png'
+const greenPath=`/static/${green}`
 
 const tel2='tel2.svg'
 const tel2Path=`/static/${tel2}`
@@ -55,7 +55,7 @@ function Footer() {
 <div className="footer">
   <div className="container">
     <div className="foter-m">
-      <img src={mPath} alt="" />
+      <img src={greenPath} alt="" />
     </div>
     <div className="footer-text">
       <div className="footer-col-1">
@@ -128,7 +128,7 @@ function Footer() {
        <li>
        <BsInstagram/>
        </li>
-    
+
 
       </ul>
     </div>

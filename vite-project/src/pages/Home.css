@@ -75,7 +75,7 @@ p {
 
   padding: 160px 0;
   color: #fff !important;
- 
+
 }
 
 .header-text-home h1 {
@@ -355,7 +355,7 @@ background-color: #3a5041 !important;
   font-family: "Hanken Grotesk", sans-serif;
   font-style: normal;
   max-width: 800px;
-  margin: 0 auto; 
+  margin: 0 auto;
   font-weight: 400;
   font-size: 18px;
   line-height: 33px;
@@ -502,7 +502,7 @@ background-color: #3a5041 !important;
 
 .frunture-coment {
   width: 54%;
- 
+
 }
 
 .frunture-img {
@@ -583,7 +583,7 @@ background-color: #3a5041 !important;
 /* ________________IMAGESS______________ */
 .footer-imgs {
   display: grid;
-  
+
   grid-template-columns: repeat(4, 1fr);
   /* align-items: center;
   overflow: hidden; */
@@ -637,7 +637,7 @@ background-color: #3a5041 !important;
   border: 3.5px solid #fff;
   transition: 2s;
   cursor: pointer;
-  
+
 }
 
 .footer-imgs a .footer-img-col:hover .overlay-foter-home {
@@ -743,12 +743,11 @@ h5 {
 
 .foter-m {
   border-bottom: 1px solid #ffffff2a;
-
   padding-bottom: 26px;
 }
 
 .foter-m img {
-  width: 100px;
+  width: 150px;
 }
 
 .footer-text {
@@ -798,11 +797,6 @@ h5 {
   color: rgba(255, 255, 255, 0.58);
 }
 
-.footer-contact {
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
 .footer-col-1 p {
   width: 200px;
 }
@@ -850,6 +844,7 @@ h5 {
   padding: 15.8px 18px;
   margin-left: -10px;
   display: flex;
+  background-color: rgb(58, 80, 65);
   align-items: center;
   justify-content: center;
   border-radius: 0px 12px 12px 0;
@@ -928,7 +923,7 @@ h5 {
     object-fit: cover;
   }
 
-  /* 
+  /*
   .ready-ship {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -965,7 +960,7 @@ h5 {
 }
 
 @media screen and (max-width: 1070px) {
- 
+
 
   /* .nav-list {
         display: none;
@@ -1009,7 +1004,7 @@ h5 {
     text-transform: uppercase;
     border: none;
     color: #fff;
-    
+
     cursor: pointer;
   }
 
@@ -1034,7 +1029,7 @@ h5 {
     flex-direction: column;
   }
 
-  /* 
+  /*
   .ready-ship {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1045,7 +1040,7 @@ h5 {
     flex-wrap: wrap;
     margin: 30px auto 75px auto;
   } */
-  /* 
+  /*
   .ready-col {
 
     display: flex;
@@ -1126,7 +1121,7 @@ h5 {
 }
 
 @media screen and (max-width: 900px) {
-  
+
   .word-instagram h1 {
    margin-top: -80px;
   }
@@ -1172,7 +1167,7 @@ h5 {
   .footer-col-3 {
     width: 80%;
     text-align: center;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 
   .footer-col-2 {
@@ -1243,7 +1238,7 @@ h5 {
     margin-top: -150px;
   }
 
-  
+
 .frunt-title{
   font-size: 20px !important;
 }
@@ -1285,7 +1280,7 @@ h5 {
   object-fit: cover !important;
   object-position: center;
 
-  } 
+  }
 
   .premium {
     display: flex;
@@ -1318,7 +1313,7 @@ h5 {
     width: 80px;
     height: 65px;
   }
-/* 
+/*
   .premium-col img {
     width: 100%;
   } */
@@ -1419,7 +1414,7 @@ justify-content: center;
     line-height: 20px;
   }
 
-  /* 
+  /*
   .ready-ship {
     display: flex;
     flex-direction: column;
@@ -1456,7 +1451,7 @@ justify-content: center;
     align-items: start;
     justify-content:start;
   } */
-/* 
+/*
   .footer-col-2 {
     margin: 40px 0;
   } */
@@ -1493,7 +1488,7 @@ justify-content: center;
   }
 }
 @media screen and (max-width: 600px) {
- 
+
   .frunture-img {
     margin-bottom: -20px;
     width: 90%;
@@ -1509,7 +1504,7 @@ justify-content: center;
     text-align: start;
     margin: 0 0;
   }
- 
+
   .footer-text h3{
     margin: -10px 0;
     font-size: 20px;
@@ -1526,7 +1521,7 @@ justify-content: center;
   }
 }
 @media screen and (max-width: 500px) {
- 
+
   .back-tel button{
     width: 300px;
     max-width: max-content;
@@ -1558,7 +1553,7 @@ justify-content: center;
   /* display: flex;
     align-items: center;
   width: 100px;
-  
+
     color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -1571,13 +1566,13 @@ justify-content: center;
   /* .ready-img{
     width: 100px;
     height: 200px;
-   
+
   }
-  
+
   .ready-col img {
     width: 100%;
     height: 100%;
-  
+
   } */
   .swiper-container {
     width: 500px;
@@ -1677,7 +1672,7 @@ justify-content: center;
   }
 
 
-  
+
   .center-text p {
     width: 300px;
     font-size: 12px;

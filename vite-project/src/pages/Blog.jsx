@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
 
 function Blog() {
-  
+
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     fetch("http://localhost:8000/blogs/")
@@ -69,13 +69,13 @@ function Blog() {
           </div>
         </div>
         </div>
-       
+
       </section>
       <section className="swiper__secmain">
         <div className="container">
-   
+
         </div>
-     
+
         <Swiper
           // slidesPerView={1}
           spaceBetween={80}
@@ -85,13 +85,13 @@ function Blog() {
           <SwiperSlide>
             <div className="bigswiper__sec">
               <div className="swiperimage__sec">
-                <img src="https://johnlewis.scene7.com/is/image/JohnLewis/furnitureandlight-livingroom-carousel-gb-010323" alt="" />
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
               </div>
               <div className="swipertext__sec">
                 {/* <div className="swipertext_h1">
                   <h1>Yataq otağı dəstləri</h1>
                 </div> */}
-             
+
                 <p>You may be anywhere in the world, but the only place that is completely personal to you and where you want to be completely your own is your bedroom. Bedrooms can be of different styles and the style also depends on the climate of the place which determines how to design your bedroom.</p>
                 <button>Continue</button>
                 <p>"True visual and physical comfort is essential for every room"</p>
@@ -125,7 +125,7 @@ function Blog() {
                 {/* <div className="swper_3">
                 <h1>Yumşaq dəstlər</h1>
                 </div> */}
-                
+
                 <p>YBuying a nursery is one of the most important investments you can make for your home. In the living room, it's a piece for lounging, reading, eating, entertaining, watching TV, and even sleeping, so it makes sense that we invest in one that will last for years to come.</p>
                 <button>Continue</button>
                 <p>"Your sofa is a big piece that will define your relaxation space"</p>
@@ -146,7 +146,7 @@ function Blog() {
         <div className="container">
           <h2>Articles</h2>
           <div className="blogs__list">
-            
+
             {blogs.map((blog) => (
               <div className="blog" key={blog.id}>
                 <div className="product__image">
@@ -167,7 +167,7 @@ function Blog() {
                     <FiChevronRight/>
 
                      </div></Link>
-                     
+
                   </div>
                 </div>
 
